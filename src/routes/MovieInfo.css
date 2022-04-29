@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #111;
+    color: #fff;
+}
+
+.movie-info-container {
+    padding: 30px;
+}
+
+.movie-title-rate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 8px;
+}
+
+.movie-title {
+    font-size: 2rem;
+}
+
+.imdb-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-poster-2 {
+    width: 65%;
+}
+
+.movie-overview {
+    margin: 20px 8px 0px 0px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.movie-info-container > h3 {
+    margin: 12px 0;
+}

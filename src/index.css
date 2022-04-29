@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,64 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.movies-container {
+  padding-top: 10px;
+  color: #fff;
+  background-color: #111;
+}
+
+.movies-container > h2 {
+  margin-left: 24px;
+}
+
+.movie-name-img {
+  position: relative;
+}
+
+.movies-poster {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 20px;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.movies-poster::-webkit-scrollbar {
+  display: none;
+}
+.movie-backdrop {
+  width: 142px;
+  max-height: 80px;
+  object-fit: contain;
+  margin:0px 4px;
+  cursor: pointer;
+  transition: transform 450ms;
+}
+
+.movie-poster {
+  width: 142px;
+  max-height: 200px;
+  object-fit: contain;
+  margin:0px 4px;
+  cursor: pointer;
+  transition: transform 450ms;
+}
+
+.movie-backdrop:hover,.movie-poster:hover {
+  transform: scale(1.08);
+}
+
+.movie-name-modal {
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 4px;
+  text-align: center;
+  padding: 4px 8px;
+  background-color: #11111152;
+  transition: all 0.15s linear;
 }

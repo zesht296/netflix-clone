@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Mainpage from "./routes/Mainpage";
+import MovieInfo from "./routes/MovieInfo";
 
 function App() {
+  const [getMovie, setGetMovie] = React.useState({});
+  const getMovieClicked = (movie) => {
+    setGetMovie(movie);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route
+          path="/"
+          element={<Mainpage getMovieClicked={getMovieClicked} />}
+        />
+        <Route path=":userId" element={<MovieInfo movie={getMovie} />} />
+      </Routes>
     </div>
   );
 }
